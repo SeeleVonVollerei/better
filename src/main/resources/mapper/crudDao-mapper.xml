@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Seele.personal.dao.crudDao">
+
+    <resultMap id="testMap" type="com.Seele.personal.pojo.TestDTO1">
+        <result column="dict_id" property="dictId"/>
+        <result column="code" property="code"/>
+        <result column="name" property="name"/>
+        <result column="description" property="description"/>
+    </resultMap>
+
+    <select id="test1" resultMap="testMap">
+        select
+        dict_id,
+        code,
+        name,
+        description
+        from bd_dict
+    </select>
+
+    <select id="test2" resultType="java.util.Map">
+        select * from bd_dict
+    </select>
+
+</mapper>

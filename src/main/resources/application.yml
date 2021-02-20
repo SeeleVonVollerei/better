@@ -1,0 +1,17 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /test
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://10.18.54.199:3306/hlb_fssc_sit?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false&zeroDateTimeBehavior=convertToNull'
+    username: dev_mjb
+    password: 'Helenbergh#$123'
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
