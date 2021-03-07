@@ -13,5 +13,11 @@ spring:
     username: dev_mjb
     password: 'Helenbergh#$123'
 
+  activemq:
+    broker-url: tcp://localhost:8002
+    in-memory: true
+    pool:
+      enabled: false
+
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
